@@ -1,0 +1,30 @@
+{
+  "name": "recapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js ",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isurubimsara/Recipe-App.git"
+  },
+  "author": "Isuru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isurubimsara/Recipe-App/issues"
+  },
+  "homepage": "https://github.com/isurubimsara/Recipe-App#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.0",
+    "nodemon": "^2.0.22"
+  }
+}
