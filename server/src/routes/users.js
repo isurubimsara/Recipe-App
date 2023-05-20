@@ -1,11 +1,16 @@
-import express from "express";
-import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
-import { UserModel } from "../models/Users";
+const express = require('express')
+const jwr = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
+
+const UserModel = require('../models/Users')
+// import express from "express";
+// import jwt from "jsonwebtoken";
+// import bcrypt from "bcrypt";
+// import { UserModel } from "../models/Users";
 
 const router = express.Router();
 
-router.post("register", async (req,res) => {
+router.post('/register', async (req,res) => {
     const {username, password} = req.body;
 
     const user = await UserModel.findOne({username})
@@ -24,4 +29,4 @@ router.post("register", async (req,res) => {
 })
 router.post("/login")
 
-export {router as userRouter};
+module.exports = router;

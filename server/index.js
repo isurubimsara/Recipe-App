@@ -1,8 +1,9 @@
-import express from "express";
-import cors from "cors";
-import mongoose from "mongoose";
+const express = require('express')
+const cors = require('cors')
+const mongoose = require('mongoose')
 
-import {userRouter } from './src/routes/users'
+const userRouter = require('./src/routes/users')
+//import {userRouter } from './src/routes/users'
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(cors());
 app.use("/auth",userRouter)
 
 mongoose.connect(
-  "mongodb+srv://isuru:recipeapp@cluster0.kjdmsus.mongodb.net/?retryWrites=true&w=majority",
+  "mongodb+srv://isuru:recipeapp@cluster0.kjdmsus.mongodb.net/userretryWrites=true&w=majority",
 ).then(() => {
     console.log("mongoDB sucessfully conected")
 }).catch((err) => {
