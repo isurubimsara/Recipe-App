@@ -1,0 +1,6 @@
+POST "http://localhost:3001/register
+
+{
+    "username":"isuru",
+    "passworf":"test1"
+}
