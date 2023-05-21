@@ -1,14 +1,13 @@
 const express = require('express')
-const jwr = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
 const UserModel = require('../models/Users')
-// import express from "express";
-// import jwt from "jsonwebtoken";
-// import bcrypt from "bcrypt";
-// import { UserModel } from "../models/Users";
 
 const router = express.Router();
+
+
+// User registration
 
 router.post('/register', async (req,res) => {
     const {username, password} = req.body;
@@ -25,8 +24,28 @@ router.post('/register', async (req,res) => {
     const newUser = new UserModel({username, password: hashedPassword})
     await newUser.save()
 
-    res.json({message: "USER CREATED SUCCESFULLY"})
+    res.json({message: `User successfully registered !, Please login ${username}`})
 })
-router.post("/login")
+
+//User Login
+
+router.post("/login", async (req,res) => {
+    const {username, password} = req.body
+    const user = await UserModel.findOne({username})
+
+    if(!user){
+        return res.json({message: "user doesn't exists ! "})
+    }
+
+    const isPassValid = await bcrypt.compare(password, user.password)
+
+    if(!isPassValid){
+        return res.json({message: "username or password incorrect"})
+    }
+
+    const token = jwt.sign({id:user._id}, "secret")
+    res.json({token, userID: user._id})
+
+})
 
 module.exports = router;
