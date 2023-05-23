@@ -1,0 +1,7 @@
+GET http://localhost:3001/recipes/
+Content-Type: application/json
+
+{
+
+   
+}

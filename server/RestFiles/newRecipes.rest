@@ -1,0 +1,14 @@
+POST http://localhost:3001/recipes/add
+Content-Type: application/json
+
+{
+
+    "name": "Pasta Cheeze",
+    "ingredients": ["meat","salt","pepper","tomato"],
+    "instructions": "Something someinohfgl hdskhsdfogho",
+    "cookingTime": "35",
+    "imageURL": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bbcgoodfood.com%2Frecipes%2Fultimate-spaghetti-carbonara-recipe&psig=AOvVaw0VTkG94YY4zAoJfcG37jiQ&ust=1684944061085000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjCmvTni_8CFQAAAAAdAAAAABAK",
+    "userOwner": "646c8fda471ac38d1d189b12"
+
+}
+

@@ -24,7 +24,7 @@ router.post('/register', async (req,res) => {
     const newUser = new UserModel({username, password: hashedPassword})
     await newUser.save()
 
-    res.json({message: `User successfully registered !, Please login ${username}`})
+    return res.json({message: `User successfully registered !, Please login ${username}` })
 })
 
 //User Login
@@ -45,7 +45,7 @@ router.post("/login", async (req,res) => {
 
     const token = jwt.sign({id:user._id}, "secret")
     res.json({token, userID: user._id})
-
+    
 })
 
 module.exports = router;
