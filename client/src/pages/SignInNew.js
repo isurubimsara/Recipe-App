@@ -55,7 +55,7 @@ export const SignInNew = () => {
             required
           />
         </div>
-        <button type="submit" className="submit-button">Sign In</button>
+        <button type="submit" className="submit-button">Register</button>
       </form>
     </div>
   );

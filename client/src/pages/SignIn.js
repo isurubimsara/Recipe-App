@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import { Link } from 'react-router-dom';
 
 export const SignIn = () => {
   const [username, setUsername] = useState('');
@@ -60,7 +61,11 @@ export const SignIn = () => {
           />
         </div>
         <button type="submit" className="submit-button">Sign In</button>
+        <div>
+        <h2 className='form-label'><Link to="/SignInNew">Register if not already a user</Link></h2>
+      </div>
       </form>
+   
     </div>
   );
 };
