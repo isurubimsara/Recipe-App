@@ -11,7 +11,7 @@ The Recipe App is a web application that allows users to create, view, and manag
 - :notebook_with_decorative_cover: Recipe Creation: Users can create new recipes by providing the necessary details, including ingredients and instructions.
 - :bookmark_tabs: Recipe Listing: All created recipes are displayed in a list format for easy browsing.
 - :mag: Recipe Details: Users can view the full details of a recipe, including its name, description, ingredients, instructions, cooking time, and image.
-- :mag_right: Save Functionality: you can save your favorite recipies to take a quick glance whenever you need them.
+- :star: Favorite Recipes: Implement the ability for users to mark recipes as favorites and view them separately.
 - :lock: User Authentication: The app ensures secure user authentication and authorization for protected routes.
 - :iphone: Responsive Design: The application is designed to be responsive, providing a seamless experience across different devices and screen sizes.
 
@@ -41,7 +41,7 @@ To run the Recipe App locally, follow these steps:
 ### :bulb: Future Enhancements
 
 - :bust_in_silhouette: User Profile: Allow users to update their profile information and manage their saved recipes.
-- :star: Favorite Recipes: Implement the ability for users to mark recipes as favorites and view them separately.
+- :mag_right: Search Functionality: Users can search for recipes based on keywords or ingredients to quickly find what they are looking for.
 - :label: Recipe Categories/Tags: Allow users to categorize recipes or assign tags for easier organization and filtering.
 - :star2: Recipe Rating and Reviews: Enable users to rate and leave reviews/comments on recipes.
 - :link: Social Sharing: Add social sharing functionality to allow users to share recipes on social media platforms.
